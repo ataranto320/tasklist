@@ -75,3 +75,19 @@ function clearTasks() {
     // for note
     // https://jsperf.com/innerhtml-vs-removechild
 }
+
+// filter tasks
+function filterTasks(e) {
+    const text = e.target.value.toLowerCase();
+    // console.log(text);
+    document.querySelectorAll(".collection-item").forEach(
+        function(task) {
+            const item = task.firstChild.textContent;
+            if (item.toLowerCase9.indexOf(text) != -1) {
+                task.style.display = "block";
+            } else {
+                task.style.display = "none";
+            }
+        }
+    );
+}
