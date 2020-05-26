@@ -47,3 +47,13 @@ function addTask(e) {
 
     e.prevenetDefault();
 }
+
+// remove task
+function removeTask(e) {
+    if (e.target.parentElement.classList.contains("delete-item")) {
+        // console.log(e.target);
+        if (confirm("Are you sure?")) {
+            e.target.parentElement.parentElement.remove();
+        }
+    }
+}
