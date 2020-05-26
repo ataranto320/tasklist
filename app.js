@@ -59,3 +59,17 @@ function removeTask(e) {
         }
     }
 }
+
+// clear tasks
+function clearTasks() {
+    // option 1
+    // taskList.innerHTML = '';
+
+    // option 2 (faster)
+    while (taskList.firstChild) {
+        taskList.removeChild(taskList.firstChild);
+    }
+
+    // for note
+    // https://jsperf.com/innerhtml-vs-removechild
+}
