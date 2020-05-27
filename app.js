@@ -43,8 +43,10 @@ function addTask(e) {
 
     // append li to ul
     taskList.appendChild(li);
-
     // console.log(li);
+
+    // store to local stprage
+    storeTaskInLocalstorage(taskInput.value);
 
     // clear input
     taskInput.value = "";
